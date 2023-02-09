@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { BsXLg, BsList } from "react-icons/bs";
+
+const Navbar = () => {
+  const [navSwitch, setNavSwitch] = useState(false);
+
+  //Active or DeActive route styles
+  const active =
+    "block py-2 pl-3 pr-4 rounded md:bg-transparent text-blue-500 font-medium md:p-0";
+  const deActive =
+    "block py-2 pl-3 pr-4 rounded md:bg-transparent text-black font-medium md:p-0";
+
+  return (
+    <nav class="bg-[#f7f7f7] border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <Link to="" class="flex items-center">
+          <img src="logo.png" class="h-[4rem] mr-3" alt="Logo" />
+        </Link>
+        <button
+          onClick={() => setNavSwitch(!navSwitch)}
+          type="button"
+          class="inline-flex items-center p-1 ml-3 text-sm text-gray-500 rounded-sm md:hidden hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200 "
+        >
+          {navSwitch ? <BsXLg size="1.8rem" /> : <BsList size="1.8rem" />}
+        </button>
+
+        <div class={`w-full md:block md:w-auto ${!navSwitch && "hidden"}`}>
+          <ul class="md:flex flex-col p-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-[#f7f7f7]">
+            <li>
+              <NavLink
+                to=""
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                HOME
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/home"
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                HOME
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/home"
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                HOME
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
