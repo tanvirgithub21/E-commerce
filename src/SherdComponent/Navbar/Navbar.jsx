@@ -13,7 +13,7 @@ const Navbar = () => {
     "block py-2 pl-3 pr-4 rounded md:bg-transparent text-black font-medium md:p-0";
 
   return (
-    <nav class="bg-[#f7f7f7] border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+    <nav class="bg-[#f7f7f7] border-gray-200 px-2 sm:px-4 rounded ">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
         <Link to="" class="flex items-center h-16">
           <img src="logo.png" class="h-full mr-3" alt="Logo" />
@@ -54,6 +54,30 @@ const Navbar = () => {
                 <div className="flex w-5 h-5 rounded-full justify-center items-center bg-rose-500 text-white absolute top-[-30%] right-[-30%]">
                   5
                 </div>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                LOGIN
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/singUp"
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                SING UP
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/logout"
+                className={({ isActive }) => (isActive ? active : deActive)}
+              >
+                LOGOUT
               </NavLink>
             </li>
           </ul>
