@@ -14,8 +14,8 @@ const Navbar = () => {
   return (
     <nav class="bg-[#f7f7f7] border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <Link to="" class="flex items-center">
-          <img src="logo.png" class="h-[4rem] mr-3" alt="Logo" />
+        <Link to="" class="flex items-center h-16">
+          <img src="logo.png" class="h-full mr-3" alt="Logo" />
         </Link>
         <button
           onClick={() => setNavSwitch(!navSwitch)}
