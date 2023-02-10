@@ -9,7 +9,7 @@ const Card = () => {
       <CardItems className="w-60%" />
 
       {/* card item bill */}
-      {/* <OrderSummary className="w-40%" /> */}
+      <OrderSummary className="w-40%" />
     </div>
   );
 };

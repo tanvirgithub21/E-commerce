@@ -63,7 +63,7 @@ const CardItems = () => {
                 </Button.Group>
               </Table.Cell>
               <Table.Cell>
-                <Button color="failure" outline={true} pill={true}>
+                <Button color="failure">
                   <MdDelete size="1.2rem" />
                 </Button>
               </Table.Cell>
