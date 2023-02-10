@@ -57,13 +57,13 @@ const ItemCard = ({ data }) => {
           </span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-lg md:text-3xl font-bold text-gray-900 dark:text-white">
-            {data?.price}
+          <span className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white">
+            <span>$ </span> {data?.price}
           </span>
 
           <a
             href="#"
-            className="rounded-lg bg-blue-700 px-2 md:px-5 py-1.5 md:py-2.5 text-center text-xs md:text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            className="rounded-lg bg-blue-700 px-2 md:px-4 py-1.5 md:py-2.5 text-center text-xs md:text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
           >
             Add to cart
           </a>

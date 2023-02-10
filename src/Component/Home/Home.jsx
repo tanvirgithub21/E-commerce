@@ -1,7 +1,8 @@
 import { Button } from "flowbite-react";
 import React from "react";
 import CarouselBox from "./Carousel/CarouselBox";
-import ItemCard from "./ItemCard/ItemCard";
+import ItemCard from "../../SherdComponent/ItemCard/ItemCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   //  ======================================================================= Test Remove data >>>>>
@@ -45,9 +46,9 @@ const Home = () => {
             <ItemCard key={data._id} data={data} />
           ))}
         </div>
-        <div className="flex justify-center">
+        <Link to="/shop" className="flex justify-center">
           <Button color="light">Show All</Button>
-        </div>
+        </Link>
       </div>
     </section>
   );

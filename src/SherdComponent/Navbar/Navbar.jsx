@@ -37,10 +37,10 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/home"
+                to="/shop"
                 className={({ isActive }) => (isActive ? active : deActive)}
               >
-                HOME
+                SHOP
               </NavLink>
             </li>
             <li>
