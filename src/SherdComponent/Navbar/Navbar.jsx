@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsXLg, BsList } from "react-icons/bs";
+import { RiShoppingCartLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [navSwitch, setNavSwitch] = useState(false);
@@ -45,10 +46,14 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/home"
-                className={({ isActive }) => (isActive ? active : deActive)}
+                to="/card"
+                className={`${({ isActive }) =>
+                  isActive ? active : deActive} relative`}
               >
-                HOME
+                <RiShoppingCartLine size="1.5rem" />
+                <div className="flex w-5 h-5 rounded-full justify-center items-center bg-rose-500 text-white absolute top-[-30%] right-[-30%]">
+                  5
+                </div>
               </NavLink>
             </li>
           </ul>
